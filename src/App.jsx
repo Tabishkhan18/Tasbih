@@ -48,6 +48,8 @@ function App() {
     <>
       <div className="main bg-black flex flex-col h-screen items-center">
 
+        <img className='absolute invert mt-2' src="./img.png" alt="" width={300}/>
+        {/* <h1 className='absolute mt-10 text-white text-3xl font-semibold'>بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</h1> */}
         <h1 className='text-9xl mt-20  text-white'>{count}</h1>
 
         {/* Increment */}
