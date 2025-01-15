@@ -84,7 +84,7 @@ function App() {
 
         {/* Utilities Buttons */}
         <div className="funtionbtn my-10 flex gap-32">
-          <button className='bg-neutral-800 active:bg-neutral-600 p-5 text-white rounded-full' onClick={() => setCount((count) => count - count)}><GrPowerReset size={35} /></button>
+          <button className='bg-neutral-800 active:bg-neutral-600 p-5 active:animate-spin-full text-white rounded-full' onClick={() => setCount((count) => count - count)}><GrPowerReset size={35} /></button>
           <button className={`p-5 text-white rounded-full ${isVibrating ? 'bg-green-500' : 'bg-neutral-800'}`} onClick={toggleVibrate}>{isVibrating ? <PiVibrateFill size={35} /> : <PiVibrateLight size={35} />}</button>
         </div>
         <p className="text-neutral-800 mb-10">By TechTabish</p>
