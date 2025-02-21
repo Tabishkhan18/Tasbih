@@ -65,7 +65,7 @@ function App() {
       <img className="absolute invert mt-5" src="./img.png" alt="" width={300} />
       <h1 className="text-9xl mt-28 text-white flex gap-2">
         {currentDigits.map((digit, index) => (
-          <div key={index} className="relative w-16 h-28 overflow-hidden flex justify-center items-end">
+          <div key={index} className="relative w-16 h-28 overflow-hidden flex justify-center items-center">
             {prevDigits[index] !== undefined && prevDigits[index] !== digit && (
               <motion.div
                 key={`${prevDigits[index]}-${index}`}
