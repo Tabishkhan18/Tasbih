@@ -63,9 +63,9 @@ function App() {
   return (
     <div className="main bg-black flex flex-col h-lvh items-center">
       <img className="absolute invert mt-5" src="./img.png" alt="" width={300} />
-      <h1 className="text-7xl mt-24 text-white flex">
+      <h1 className="text-9xl mt-28 text-white flex gap-2">
         {currentDigits.map((digit, index) => (
-          <div key={index} className="relative w-10 h-24 overflow-hidden flex justify-center items-center">
+          <div key={index} className="relative w-16 h-28 overflow-hidden flex justify-center items-end">
             {prevDigits[index] !== undefined && prevDigits[index] !== digit && (
               <motion.div
                 key={`${prevDigits[index]}-${index}`}
@@ -91,14 +91,14 @@ function App() {
       </h1>
       
       {/* Increment Button */}
-      <button className="my-10 bg-green-950 active:bg-green-900 border-8 border-black active:border-[#22c55e] p-5 rounded-full" onClick={handleIncrement}>
+      <button className="mt-10 bg-green-950 active:bg-green-900 border-8 border-black active:border-[#22c55e] p-5 rounded-full" onClick={handleIncrement}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" fill="none" stroke="#22c55e" strokeWidth="5">
           <polyline points="40,120 100,60 160,120" />
         </svg>
       </button>
 
       {/* Decrement Button */}
-      <button className="my-10 absolute top-[24rem] bg-green-950 active:bg-green-900 border-8 border-black active:border-[#22c55e] p-5 rounded-full" onClick={handleDecrement}>
+      <button className="my-10 absolute top-[26rem] bg-green-950 active:bg-green-900 border-8 border-black active:border-[#22c55e] p-5 rounded-full" onClick={handleDecrement}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50" fill="none" stroke="#22c55e" strokeWidth="5">
           <polyline points="10,15 25,30 40,15" />
         </svg>
