@@ -47,7 +47,7 @@ function App() {
 
   return (
     <>
-      <div className="main bg-black flex flex-col h-screen items-center">
+      <div className="main bg-black flex flex-col h-fit items-center">
 
         <img className='absolute invert mt-2' src="./img.png" alt="" width={300} />
         {/* <h1 className='absolute mt-10 text-white text-3xl font-semibold'>بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</h1> */}
