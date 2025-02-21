@@ -47,11 +47,11 @@ function App() {
 
   return (
     <>
-      <div className="main bg-black flex flex-col h-fit items-center">
+      <div className="main bg-black flex flex-col h-lvh items-center">
 
-        <img className='absolute invert mt-2' src="./img.png" alt="" width={300} />
+        <img className='absolute invert mt-5' src="./img.png" alt="" width={300} />
         {/* <h1 className='absolute mt-10 text-white text-3xl font-semibold'>بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</h1> */}
-        <h1 className='text-9xl mt-20  text-white'>{count}</h1>
+        <h1 className='text-9xl mt-28  text-white'>{count}</h1>
 
         {/* Increment */}
         <button className='my-10 bg-green-950 active:bg-green-900 border-8 border-black active:border-[#22c55e] p-5 rounded-full' onClick={handleIncrement}>
@@ -69,7 +69,7 @@ function App() {
         </button>
 
         {/* Decrement */}
-        <button className='my-10 absolute top-[26rem] bg-green-950 active:bg-green-900 border-8 border-black active:border-[#22c55e] p-5 rounded-full' onClick={() => { if (count > 0) { setCount((count) => count - 1) } }}>
+        <button className='my-10 absolute top-[28rem] bg-green-950 active:bg-green-900 border-8 border-black active:border-[#22c55e] p-5 rounded-full' onClick={() => { if (count > 0) { setCount((count) => count - 1) } }}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 50 50"
@@ -84,14 +84,15 @@ function App() {
         </button>
 
         {/* Utilities Buttons */}
-        <div className="funtionbtn my-10 flex gap-32">
+        <div className="funtionbtn my-10 flex gap-14">
           <button className='bg-neutral-800 active:bg-neutral-600 p-5 active:animate-spin-full text-white rounded-full' onClick={() => setCount((count) => count - count)}><GrPowerReset size={35} /></button>
+          <div className='py-5'>
+            <Tooltip />
+          </div>
           <button className={`p-5 text-white rounded-full ${isVibrating ? 'bg-green-500' : 'bg-neutral-800'}`} onClick={toggleVibrate}>{isVibrating ? <PiVibrateFill size={35} /> : <PiVibrateLight size={35} />}</button>
         </div>
         <p className="text-neutral-800">TechTabish </p>
-        <div className='flex w-full justify-center py-5'>
-          <Tooltip />
-        </div>
+
       </div>
     </>
   )
