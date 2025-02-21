@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { PiVibrateFill } from "react-icons/pi";
 import { PiVibrateLight } from "react-icons/pi";
 import { GrPowerReset } from "react-icons/gr";
+import Tooltip from './Tooltip';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -48,7 +49,7 @@ function App() {
     <>
       <div className="main bg-black flex flex-col h-screen items-center">
 
-        <img className='absolute invert mt-2' src="./img.png" alt="" width={300}/>
+        <img className='absolute invert mt-2' src="./img.png" alt="" width={300} />
         {/* <h1 className='absolute mt-10 text-white text-3xl font-semibold'>بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</h1> */}
         <h1 className='text-9xl mt-20  text-white'>{count}</h1>
 
@@ -87,7 +88,10 @@ function App() {
           <button className='bg-neutral-800 active:bg-neutral-600 p-5 active:animate-spin-full text-white rounded-full' onClick={() => setCount((count) => count - count)}><GrPowerReset size={35} /></button>
           <button className={`p-5 text-white rounded-full ${isVibrating ? 'bg-green-500' : 'bg-neutral-800'}`} onClick={toggleVibrate}>{isVibrating ? <PiVibrateFill size={35} /> : <PiVibrateLight size={35} />}</button>
         </div>
-        <p className="text-neutral-800 mb-10">By TechTabish</p>
+        <p className="text-neutral-800">TechTabish </p>
+        <div className='flex w-full justify-center py-5'>
+          <Tooltip />
+        </div>
       </div>
     </>
   )
